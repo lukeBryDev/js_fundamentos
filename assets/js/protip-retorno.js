@@ -71,7 +71,10 @@ let tony = {
 //     console.log('coords', personaje.coords);
 // }
 
-const imprimeProps = ({ nombre, codeName, vivo, edad, trajes }) => {
+const imprimeProps = ({ nombre, codeName, vivo, edad = 0, trajes }) => {
+
+    edad = edad || 0; // validador poco eficiente. Es mejor definirlo default arriba
+
     console.log({ nombre });
     console.log({ codeName });
     console.log({ vivo });
